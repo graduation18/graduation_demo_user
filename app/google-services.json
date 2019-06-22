@@ -1,0 +1,121 @@
+{
+  "project_info": {
+    "project_number": "178928120581",
+    "firebase_url": "https://mashrou3ta5rog-30146.firebaseio.com",
+    "project_id": "mashrou3ta5rog-30146",
+    "storage_bucket": "mashrou3ta5rog-30146.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:178928120581:android:9b0436beb360a87f",
+        "android_client_info": {
+          "package_name": "com.example.fatma.graduation_demo_user"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "178928120581-ue52lfbjf3oqtgifhdo8sjjl4t8dmg56.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fatma.graduation_demo_user",
+            "certificate_hash": "4e1be95371d16bb9c9781d14ca92c1e81bf4ad82"
+          }
+        },
+        {
+          "client_id": "178928120581-v39hu11eihq40jig153lpd6hj5mcoqjo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.fatma.graduation_demo_user",
+            "certificate_hash": "da436ca416327427ffa44478a91c2ae1ea5100cb"
+          }
+        },
+        {
+          "client_id": "178928120581-7h2gbmqovv9pr1rn6ooe7rhesqcpihnj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBr4XtcNA2_KEARkBVNHYEkP1zxPhsh8_A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "178928120581-7h2gbmqovv9pr1rn6ooe7rhesqcpihnj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "178928120581-85s0cv5tjv5gg21jo9h7hitemo0mcpgq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.maherelamary.brandnew"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:178928120581:android:03903c0c736f109d",
+        "android_client_info": {
+          "package_name": "com.example.gaber.graduation_demo_driver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "178928120581-b6kbk1edqq149nh7qpld4dm2644h98k0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gaber.graduation_demo_driver",
+            "certificate_hash": "da436ca416327427ffa44478a91c2ae1ea5100cb"
+          }
+        },
+        {
+          "client_id": "178928120581-7h2gbmqovv9pr1rn6ooe7rhesqcpihnj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBr4XtcNA2_KEARkBVNHYEkP1zxPhsh8_A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "178928120581-7h2gbmqovv9pr1rn6ooe7rhesqcpihnj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "178928120581-85s0cv5tjv5gg21jo9h7hitemo0mcpgq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.maherelamary.brandnew"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

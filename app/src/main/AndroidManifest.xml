@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.fatma.graduation_demo_user">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality.
+    -->
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDxy0ndkDYovy6TEo71pnhMhfopHbX4fpg" />
+
+        <activity android:name=".activities.blabla_activities.trips"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".activities.sign_up"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activities.blabla_activities.trip_search"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activities.blabla_activities.confirm_trip"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activities.uber_activities.uber_pickup"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activities.uber_activities.uber_confirm_drop"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activities.uber_activities.uber_confirm_ride"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activities.splash"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.mobile_authentication"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activities.confirm_code"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activities.Main_view"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activities.marsol_activities.marsol_pick_up_place"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".activities.marsol_activities.marsol_offer_details"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

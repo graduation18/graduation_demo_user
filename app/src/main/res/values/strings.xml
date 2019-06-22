@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">graduation_demo_user</string>
+    <string name="Confirm_Leaving_from">Confirm_Leaving_from</string>
+    <string name="Fare_estimate">fare estimate : </string>
+    <string name="restaurant">restaurants</string>
+    <string name="super_markets">super markets</string>
+    <string name="pharmacies">pharmacies</string>
+    <string name="add_promo_code">Add Promo Code</string>
+    <string name="drop_off">Drop You Off At</string>
+    <string name="pick_you_up_from">Pick You Up From</string>
+    <string name="confirm_order_place">Confirm Order Place</string>
+</resources>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.blabla_activities.trip_search"
+    android:orientation="vertical">
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view_from"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom"
+        android:layout_margin="10dp"
+        card_view:cardCornerRadius="20dp"
+       >
+
+        <AutoCompleteTextView
+            android:id="@+id/search_from"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@null"
+
+            android:gravity="left"
+            android:hint="From.."
+            android:paddingLeft="25dp"
+            android:paddingRight="35dp"
+            android:textAlignment="textStart"
+            tools:ignore="RtlCompat" />
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view_to"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom"
+        android:layout_margin="10dp"
+        card_view:cardCornerRadius="20dp"
+
+        >
+
+        <AutoCompleteTextView
+            android:id="@+id/search_to"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@null"
+
+            android:gravity="left"
+            android:hint="To.."
+            android:paddingLeft="25dp"
+            android:paddingRight="35dp"
+            android:textAlignment="textStart"
+            tools:ignore="RtlCompat"/>
+    </android.support.v7.widget.CardView>
+
+    <com.github.florent37.singledateandtimepicker.SingleDateAndTimePicker
+        android:id="@+id/single_day_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+
+        app:picker_curved="true"
+        app:picker_cyclic="true"
+        app:picker_displayMinutes="true"
+        app:picker_textSize="24dp"
+        app:picker_visibleItemCount="7"
+
+
+        />
+
+    <Button
+        android:id="@+id/find_trip"
+        android:layout_gravity="center"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/colorPrimary"
+        android:text="Find my trip"
+
+        android:onClick="find_trip"
+        android:paddingLeft="25dp"
+        android:paddingRight="35dp"
+        android:textAlignment="center"
+         />
+</LinearLayout>
