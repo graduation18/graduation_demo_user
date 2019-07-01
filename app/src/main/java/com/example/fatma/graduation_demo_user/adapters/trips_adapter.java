@@ -1,13 +1,11 @@
 package com.example.fatma.graduation_demo_user.adapters;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RatingBar;
 import android.widget.TextView;
@@ -28,7 +26,6 @@ import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -48,12 +45,12 @@ public class trips_adapter extends RecyclerView.Adapter<trips_adapter.MyViewHold
                     super(view);
                     cardView = (CardView) view.findViewById(R.id.card_view);
                     driverImage = (CircleImageView) view.findViewById(R.id.driver_image);
-                   driverName =(TextView) view.findViewById(R.id.driver_name);
+                    driverName =(TextView) view.findViewById(R.id.driver_name);
                     destinationPoint=(TextView) view.findViewById(R.id.trip_destination_address);
-                   startPoint =(TextView) view.findViewById(R.id.trip_start_address);
-                   price =(TextView) view.findViewById(R.id.trip_price);
-                  tripDuration =(TextView) view.findViewById(R.id.trip_duration);
-                  driverRate = (RatingBar) view.findViewById(R.id.ratingBar) ;
+                    startPoint =(TextView) view.findViewById(R.id.trip_start_address);
+                    price =(TextView) view.findViewById(R.id.trip_price);
+                    tripDuration =(TextView) view.findViewById(R.id.trip_duration);
+                    driverRate = (RatingBar) view.findViewById(R.id.ratingBar) ;
 
 
 
@@ -79,10 +76,8 @@ public class trips_adapter extends RecyclerView.Adapter<trips_adapter.MyViewHold
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-
         trip_model data = datalist.get(position);
-        driver_model driver_data=search_for_driver(data.driver_id);
-        holder.driverName.setText(driver_data.name);
+        search_for_driver(data.driver_id,holder);
         holder.startPoint.setText(data.Leave_from_city);
         holder.destinationPoint.setText(data.going_to_city);
         Date d = new Date(data.time);
@@ -90,17 +85,6 @@ public class trips_adapter extends RecyclerView.Adapter<trips_adapter.MyViewHold
         String dateText = df2.format(d);
         holder.tripDuration.setText(dateText);
         holder.price.setText(String .valueOf(data.cost)+"L.E");
-        Picasso.with(context)
-                .load(driver_data.image)
-                .placeholder(R.mipmap.ic_launcher).transform(new PicassoCircleTransformation()).into(holder.driverImage, new Callback() {
-            @Override
-            public void onSuccess() {}
-            @Override public void onError() {
-                Toast.makeText(context,"error loading image",Toast.LENGTH_LONG).show();
-            }
-        });
-        holder.driverRate.setRating(driver_data.rate);
-
     }
 
 
@@ -108,7 +92,7 @@ public class trips_adapter extends RecyclerView.Adapter<trips_adapter.MyViewHold
     public int getItemCount() {
         return datalist.size();
     }
-    private driver_model search_for_driver(String driver_id)
+    private void search_for_driver(String driver_id, final MyViewHolder holder)
     {
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("drivers");
         Query query = reference.orderByKey().equalTo(driver_id);
@@ -119,6 +103,18 @@ public class trips_adapter extends RecyclerView.Adapter<trips_adapter.MyViewHold
 
                     for (DataSnapshot sub_type : dataSnapshot.getChildren()) {
                       driver=sub_type.getValue(driver_model.class);
+                        holder.driverName.setText(driver.name);
+                        Picasso.with(context)
+                                .load(driver.image)
+                                .placeholder(R.mipmap.ic_launcher).transform(new PicassoCircleTransformation())
+                                .into(holder.driverImage, new Callback() {
+                            @Override
+                            public void onSuccess() {}
+                            @Override public void onError() {
+                                Toast.makeText(context,"error loading image",Toast.LENGTH_LONG).show();
+                            }
+                        });
+                        holder.driverRate.setRating(driver.rate);
                     }
 
                 }
@@ -130,9 +126,6 @@ public class trips_adapter extends RecyclerView.Adapter<trips_adapter.MyViewHold
             }
         });
 
-        if (driver!=null){
-            return driver;
-        }
-        return null;
+
     }
 }

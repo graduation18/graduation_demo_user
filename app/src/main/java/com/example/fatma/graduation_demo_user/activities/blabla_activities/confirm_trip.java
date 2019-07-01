@@ -1,9 +1,9 @@
 package com.example.fatma.graduation_demo_user.activities.blabla_activities;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import com.google.android.libraries.places.api.Places;
+
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;

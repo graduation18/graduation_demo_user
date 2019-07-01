@@ -1,14 +1,11 @@
 package com.example.fatma.graduation_demo_user.activities;
 
-import android.Manifest;
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.location.Location;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.AppCompatEditText;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatEditText;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -18,18 +15,9 @@ import com.example.fatma.graduation_demo_user.R;
 import com.example.fatma.graduation_demo_user.activities.uber_activities.uber_pickup;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationServices;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.iid.FirebaseInstanceId;
-import com.karumi.dexter.Dexter;
-import com.karumi.dexter.MultiplePermissionsReport;
-import com.karumi.dexter.PermissionToken;
-import com.karumi.dexter.listener.PermissionRequest;
-import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
-import com.rilixtech.CountryCodePicker;
-
-import java.util.List;
 
 public class sign_up extends AppCompatActivity {
 

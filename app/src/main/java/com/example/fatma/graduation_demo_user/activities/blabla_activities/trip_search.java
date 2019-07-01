@@ -1,7 +1,7 @@
 package com.example.fatma.graduation_demo_user.activities.blabla_activities;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 import android.view.KeyEvent;
@@ -798,7 +798,7 @@ public class trip_search extends AppCompatActivity {
         find_trip_btn = (Button) findViewById(R.id.find_trip) ;
         search_to = (AutoCompleteTextView) findViewById(R.id.search_to);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-          singleDateAndTimePicker = (SingleDateAndTimePicker) findViewById(R.id.single_day_picker);
+        singleDateAndTimePicker = (SingleDateAndTimePicker) findViewById(R.id.single_day_picker);
 
         singleDateAndTimePicker.addOnDateChangedListener(new SingleDateAndTimePicker.OnDateChangedListener() {
             @Override

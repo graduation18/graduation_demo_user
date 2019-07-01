@@ -9,4 +9,13 @@
     <string name="drop_off">Drop You Off At</string>
     <string name="pick_you_up_from">Pick You Up From</string>
     <string name="confirm_order_place">Confirm Order Place</string>
+    <string name="Promo">Promo</string>
+    <string name="no_such_promo_code">No Such Promo Code</string>
+    <string name="confirm">Confirm</string>
+    <string name="promo_code">Promo Code</string>
+    <string name="promo_code_not_valid_any_more">Promo Code Not Valid Any More</string>
+    <string name="other">other</string>
+    <string name="selected_place">Selected Place</string>
+    <string name="confirm_description">Confirm Description</string>
+    <string name="deliver_to">Deliver To</string>
 </resources>

@@ -4,12 +4,6 @@
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <!--
-         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
-         Google Maps Android API v2, but you must specify either coarse or fine
-         location permissions for the 'MyLocation' functionality.
-    -->
-
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
@@ -23,40 +17,54 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDxy0ndkDYovy6TEo71pnhMhfopHbX4fpg" />
+        <activity android:name="com.example.fatma.graduation_demo_user.activities.splash"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
 
-        <activity android:name=".activities.blabla_activities.trips"
+        <activity android:name="com.example.fatma.graduation_demo_user.activities.blabla_activities.trips"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity
-            android:name=".activities.sign_up"
+            android:name="com.example.fatma.graduation_demo_user.activities.sign_up"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".activities.blabla_activities.trip_search"
+        <activity android:name="com.example.fatma.graduation_demo_user.activities.blabla_activities.trip_search"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".activities.blabla_activities.confirm_trip"
+        <activity android:name="com.example.fatma.graduation_demo_user.activities.blabla_activities.confirm_trip"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".activities.uber_activities.uber_pickup"
+        <activity android:name="com.example.fatma.graduation_demo_user.activities.uber_activities.uber_pickup"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".activities.uber_activities.uber_confirm_drop"
+        <activity android:name="com.example.fatma.graduation_demo_user.activities.uber_activities.uber_confirm_drop"
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".activities.uber_activities.uber_confirm_ride"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".activities.splash"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".activities.mobile_authentication"
+        <activity android:name="com.example.fatma.graduation_demo_user.activities.mobile_authentication"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".activities.confirm_code"
+        <activity android:name="com.example.fatma.graduation_demo_user.activities.confirm_code"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".activities.Main_view"
+        <activity android:name="com.example.fatma.graduation_demo_user.activities.Main_view"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".activities.marsol_activities.marsol_pick_up_place"
+        <activity android:name="com.example.fatma.graduation_demo_user.activities.marsol_activities.marsol_pick_up_place"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".activities.marsol_activities.marsol_offer_details"
+        <activity android:name="com.example.fatma.graduation_demo_user.activities.marsol_activities.marsol_offer_details"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity android:name="com.example.fatma.graduation_demo_user.activities.marsol_activities.marsool_delivery_place"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <service android:name=".services.MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".services.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

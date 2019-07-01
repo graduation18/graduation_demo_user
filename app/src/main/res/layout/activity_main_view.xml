@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.sign_up"
     android:orientation="vertical">
     <TextView
         android:layout_width="match_parent"
@@ -19,7 +18,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <android.support.v7.widget.AppCompatEditText
+        <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/name"
             android:layout_width="320dp"
             android:layout_margin="16dp"
@@ -29,7 +28,7 @@
             android:hint="Name"
             android:inputType="textPersonName" />
 
-        <android.support.v7.widget.AppCompatEditText
+        <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/email"
             android:layout_width="320dp"
             android:layout_margin="16dp"
@@ -39,7 +38,7 @@
             android:hint="Email"
             android:inputType="textEmailAddress" />
 
-        <android.support.v7.widget.AppCompatEditText
+        <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/password"
             android:layout_width="320dp"
             android:layout_margin="16dp"

@@ -1,30 +1,20 @@
 package com.example.fatma.graduation_demo_user.activities;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.CountDownTimer;
-import android.provider.Settings;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.AppCompatEditText;
+import androidx.appcompat.widget.AppCompatEditText;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ProgressBar;
-import android.widget.TextView;
-import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
 
 import com.example.fatma.graduation_demo_user.R;
-import com.example.fatma.graduation_demo_user.activities.uber_activities.uber_pickup;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -33,11 +23,6 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.iid.FirebaseInstanceId;
 import com.rilixtech.CountryCodePicker;
-
-import org.json.JSONObject;
-
-import java.util.HashMap;
-import java.util.Map;
 
 
 public class mobile_authentication extends AppCompatActivity {

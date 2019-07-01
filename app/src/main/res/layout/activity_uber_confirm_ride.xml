@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
 
-    <android.support.v7.widget.CardView
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -35,7 +35,7 @@
                 android:layout_gravity="bottom"
                 android:layout_marginBottom="40dp"
                 >
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="15dp"
@@ -56,16 +56,18 @@
                             android:drawableLeft="@drawable/coin"
                             android:drawablePadding="5dp"
                             android:layout_margin="5dp"/>
-                        <TextView
+                        <Button
                             android:id="@+id/promo_code"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:background="@null"
                             android:layout_margin="5dp"
-                            android:text="@string/add_promo_code"
+                            android:hint="@string/add_promo_code"
                             android:padding="10dp"
                             android:drawableStart="@drawable/discount"
                             android:drawableLeft="@drawable/discount"
                             android:drawablePadding="5dp"
+                            android:clickable="true"
                             />
                         <Button
                             android:id="@+id/Confirm_Leaving_from"
@@ -83,14 +85,14 @@
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
             </RelativeLayout>
 
         </FrameLayout>
 
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
 
 </LinearLayout>

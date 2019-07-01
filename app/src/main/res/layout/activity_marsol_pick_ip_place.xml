@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:layout_width="match_parent"
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -18,10 +19,34 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <com.google.android.gms.maps.MapView
-                    android:id="@+id/mapView"
+                <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <com.google.android.gms.maps.MapView
+                            android:id="@+id/mapView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center">
+                        <ImageView
+                            android:id="@+id/market_marker"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/market"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"
+                            android:visibility="gone"/>
+                    </RelativeLayout>
+
+                </FrameLayout>
+
 
 
             </RelativeLayout>
@@ -32,7 +57,7 @@
                 android:layout_height="match_parent"
                 android:background="@null"
                 >
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="15dp"
@@ -54,61 +79,80 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:orientation="horizontal">
-                            <RadioButton
-                                android:id="@+id/restaurant"
-                                android:text="@string/restaurant"
-                                android:layout_margin="10dp"
-                                android:textSize="12dp"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
-                            <RadioButton
-                                android:id="@+id/super_markets"
-                                android:text="@string/super_markets"
-                                android:layout_margin="10dp"
-                                android:textSize="12dp"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
+
+
+
+                                            <RadioButton
+                                                android:id="@+id/restaurant"
+                                                android:text="@string/restaurant"
+                                                android:layout_margin="10dp"
+                                                android:textSize="12dp"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"/>
+                                            <RadioButton
+                                                android:id="@+id/super_markets"
+                                                android:text="@string/super_markets"
+                                                android:layout_margin="10dp"
+                                                android:textSize="12dp"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_weight="1"/>
+
                             <RadioButton
                                 android:id="@+id/pharmacies"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
                                 android:text="@string/pharmacies"
-                                android:layout_marginTop="10dp"
-                                android:textSize="12dp"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
+                                android:textSize="12dp" />
+                                                <RadioButton
+                                                    android:id="@+id/other"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_margin="10dp"
+                                                    android:text="@string/other"
+                                                    android:textSize="12dp"
+                                                    android:layout_weight="1"/>
                         </RadioGroup>
 
                     </LinearLayout>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
 
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_margin="10dp"
+                    android:layout_margin="15dp"
                     app:cardCornerRadius="15dp">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:orientation="vertical"
-                        android:layout_margin="25dp">
+                        android:layout_margin="5dp"
+                        >
                         <TextView
                             android:id="@+id/place"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            />
+                            android:drawableStart="@drawable/restaurant"
+                            android:drawableLeft="@drawable/restaurant"
+                            android:layout_marginBottom="10dp"
+                            android:drawablePadding="5dp"/>
                     <Button
                     android:id="@+id/Confirm_Leaving_from"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/confirm_order_place"
                     android:textColor="@color/white2"
-                    android:background="@drawable/round_shape"
+                    android:background="@drawable/round_shape2"
                     />
                     </LinearLayout>
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
             </RelativeLayout>
 
         </FrameLayout>

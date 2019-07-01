@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.blabla_activities.trip_search"
     android:orientation="vertical">
-    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/card_view_from"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -30,9 +29,9 @@
             android:paddingRight="35dp"
             android:textAlignment="textStart"
             tools:ignore="RtlCompat" />
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
-    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    <androidx.cardview.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
         android:id="@+id/card_view_to"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -57,7 +56,7 @@
             android:paddingRight="35dp"
             android:textAlignment="textStart"
             tools:ignore="RtlCompat"/>
-    </android.support.v7.widget.CardView>
+    </androidx.cardview.widget.CardView>
 
     <com.github.florent37.singledateandtimepicker.SingleDateAndTimePicker
         android:id="@+id/single_day_picker"
